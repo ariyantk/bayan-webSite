@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست اساتید</title>
+    <meta name="description" content=" لیست اساتید مجموعه">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="AS-primary-navigation">
+        <ul>
+          <li><a href="/contact-us.html">تماس با ما</a></li>
+          <li>
+            <a href="#">آموزش موسیقی &dtrif;</a>
+            <ul class="dropdown">
+              <li><a href="/classic-instruments.html"> سازهای کلاسیک</a></li>
+              <li><a href="#">ساز های سنتی</a></li>
+              <li><a href="#">موسیقی کودکان</a></li>
+            </ul>
+          </li>
+          <li><a href="/about-us.html">درباره ما</a></li>
+          <li><a href="/Masters-List.html">لیست اساتید</a></li>
+          <li id="last-one"><a href="/index.html">خانه</a></li>
+        </ul>
+      </nav>
+      <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet"/>
+
+
+      <div class="fix">
+        <div class="search-wrappper">
+            <label for="search"></label>
+            <input type="search" id ="search" data-search placeholder="...جستوجو">
+        </div>
+        <div class="dropdown-filter">
+            <div class="select">
+                <span class="selected"> ساز مورد نظر خود را انتخاب کنید </span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu" data-category-container></ul>
+            <template category-template>
+                    <div class="inner-list">
+                        <li data-list></li>
+                    </div>
+            </template>
+        </div>
+    </div>
+    <div class="box">
+        <div class="user-cards" data-user-cards-container></div>
+        <template data-user-template>
+            <div class="cards">
+                <img alt="عکس اساتید" id="profile">
+                <div class="header" data-header></div>
+                <div class="body" data-body></div>
+            </div>
+        </template>
+    </div>
+        
+    <div class="footer">
+      <div class="inside-footer">
+        <div id="footer-contact">
+          <div class="infodiv">
+            <p class="info">
+              آدرس: تهران، خیابان بهار شمالی، رو به روی کوچه شیمی، پلاک 319 ֎ 
+            </p>
+            <p class="info">77983300. 09120348996 ֎</p>
+          </div>
+          <h4 class="h1-footer">ما را در شبکه های اجتماعی دنبال کنید </h4>
+            <div class="instagram social-bt"></div>
+            <div class="telegram social-bt"></div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+</body>
+</html>
