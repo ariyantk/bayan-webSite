@@ -8,7 +8,7 @@
     margin: auto;
     width: max-content;
     color: #fff;
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 .box{
@@ -21,13 +21,24 @@
     padding: 0;
 }
 input{
-    font-size: 35px;
+    direction: rtl;
+    height:55px;
+    width: auto;
+    font-size: 25px;
     text-align: right;
     outline: none;
     border:2px solid #777;
     background-color: #191919;
     color: #fff;
+    padding-right: 10px;
 }
+
+input::-webkit-search-cancel-button { 
+    -webkit-appearance: none; 
+    appearance: none; 
+    position: relative; 
+    left: -20px; 
+  }
 
 .user-cards {
     display: grid;
@@ -87,12 +98,14 @@ span{
 
 .dropdown-filter{
     display: flex;
+
     justify-content: center;
     flex-wrap: wrap;
     min-width: 15em;
     text-align: right;
     position: relative;
     margin: 2em;
+
 }
 
 .select{
@@ -106,6 +119,9 @@ span{
     padding: 1em;
     cursor: pointer;
     transition: background 0.3s;
+    flex-direction: row-reverse;
+    width: 275px;
+
 }
 
 .select-cliked{
