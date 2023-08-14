@@ -1,5 +1,3 @@
-let person;
-
 //Make a search bar
 const userCardTemplate = document.querySelector("[data-user-template]");
 const userCardContainer = document.querySelector("[data-user-cards-container]");
@@ -38,7 +36,7 @@ dropDowns.forEach((dropDown) => {
   });
 
   //mapping categories
-  fetch("./category.json")
+  fetch("./dataBase/category.json")
     .then((res) => res.json())
     .then((data) => {
       categories = data.map((cat) => {
@@ -51,6 +49,7 @@ dropDowns.forEach((dropDown) => {
           const selected = document.querySelector(".selected");
           selected.innerText = cat.instrumentName;
           const newInstrument = cat.instrumentName;
+
           users.forEach((user) => {
             if (newInstrument == "همه") {
               location.reload();
@@ -63,7 +62,6 @@ dropDowns.forEach((dropDown) => {
           options.forEach((opt) => {
             opt.classList.remove("active");
           });
-
           title.classList.add("active");
           title.classList.remove("active");
         });
@@ -75,7 +73,7 @@ dropDowns.forEach((dropDown) => {
 });
 
 //Mapping users
-fetch("./masters.json")
+fetch("./dataBase/masters.json")
   .then((res) => res.json())
   .then((data) => {
     users = data.map((user) => {
